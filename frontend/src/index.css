@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-saffron: #ea580c;
+  --color-saffron-dark: #c2410c;
+  --color-saffron-light: #fff7ed;
+  --color-gold: #d97706;
+  --color-gold-rich: #b45309;
+  --color-gold-light: #fef3c7;
+  --color-gold-pale: #fffbeb;
+  --color-maroon-dark: #450a0a;
+  --color-maroon: #7f1d1d;
+  --color-maroon-rich: #5c0d11;
+  --color-burgundy: #881337;
+  --color-ivory: #fffdfa;
+  --color-cream: #faf7f0;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: #faf7f0;
+  color: #1c1917;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.font-serif { font-family: var(--font-serif); }
+
+/* Premium Gold & Maroon gradients */
+.bg-devotional-gradient {
+  background: linear-gradient(135deg, #450a0a 0%, #7f1d1d 50%, #5c0d11 100%);
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Ornamental border */
+.border-gold-trim {
+  border-color: rgba(217, 119, 6, 0.3);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #faf7f0; }
+::-webkit-scrollbar-thumb { background: #b45309; border-radius: 3px; }
+
+/* Line clamp utilities */
+.line-clamp-1 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
+.line-clamp-2 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.line-clamp-3 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+
+/* Skeleton shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, #f5efe6 25%, #ebdcc9 50%, #f5efe6 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 6px;
+}
+
+/* Fade in */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn 0.3s ease forwards; }
+
+/* Slide down */
+@keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+.animate-slide-down { animation: slideDown 0.2s ease forwards; }

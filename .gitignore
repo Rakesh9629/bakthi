@@ -1,0 +1,91 @@
+# ===================================================
+# BHAKTHI PRINTINGS - GIT IGNORE
+# ===================================================
+
+# --- Secrets & Environment Configurations ---
+# NEVER commit database credentials, passwords, or API keys to GitHub
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+*.env
+*.env.local
+
+# --- Python Virtual Environments & Packages ---
+venv/
+venv*/
+backend/venv/
+env/
+env*/
+ENV/
+.venv/
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# --- Python Bytecode & Cache ---
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- Node & Frontend Dependencies ---
+node_modules/
+frontend/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# --- Frontend Build Output ---
+frontend/dist/
+frontend/dist-ssr/
+dist/
+dist-ssr/
+
+# --- Local Databases & Backups ---
+*.db
+*.sqlite
+*.sqlite3
+bhakthi.db
+*.sql.gz
+
+# --- OS & Editor Specific Files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.bak
+
